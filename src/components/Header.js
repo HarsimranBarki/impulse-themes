@@ -1,6 +1,7 @@
-import { Button } from "@chakra-ui/button";
+import { IconButton } from "@chakra-ui/button";
 import { Box, Flex, Text } from "@chakra-ui/layout";
 import React from "react";
+import { FaGithub } from "react-icons/fa";
 import { DarkModeSwitch } from "./DarkModeSwitch";
 
 const Header = () => {
@@ -14,10 +15,18 @@ const Header = () => {
       maxW="80vw"
     >
       <Box>
-        <Text>Home</Text>
+        <Text fontWeight="semibold">Home</Text>
       </Box>
       <Flex alignItems="center">
-        <Button>GitHub</Button>
+        <IconButton
+          colorScheme="blackAlpha"
+          icon={<FaGithub />}
+          size="lg"
+          mr={5}
+          variant="link"
+        >
+          GitHub
+        </IconButton>
         <DarkModeSwitch />
       </Flex>
     </Flex>
